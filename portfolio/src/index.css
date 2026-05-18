@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Definir tema personalizado (opcional, similar al anterior) */
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+
+  --color-accent: #007aff;
+  --color-accent-light: #5e9eff;
+  --color-accent-dark: #0055cc;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Utilidades personalizadas (reemplazo de @layer components) */
+@utility container-custom {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media (width >= 48rem) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@utility section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @media (width >= 48rem) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@utility apple-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid var(--color-gray-100);
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+}
+
+/* Estilos base */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: white;
+    color: var(--color-gray-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  @utility btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+    transition: background-color 0.2s;
+  }
+  @utility btn-primary:hover {
+    background-color: var(--color-accent-dark);
+  }
+
+  @utility text-accent {
+    color: var(--color-accent);
+  }
+  @utility border-accent {
+    border-color: var(--color-accent);
+  }
+}

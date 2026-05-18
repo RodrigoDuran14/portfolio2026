@@ -1,0 +1,181 @@
+{
+  "es": {
+    "nav": {
+      "button": "DESCARGAR CV"
+    },
+    "section": {
+      "about": "Sobre mí",
+      "education": "Educación",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "contact": "Contacto"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "short": "Desarrollador Web Full Stack apasionado por crear soluciones eficientes.",
+      "long": "Soy Rodrigo Martín Durán, un desarrollador full stack a punto de finalizar la Tecnicatura en Programación. Me especializo en el desarrollo de aplicaciones web modernas utilizando tecnologías como React, Node.js y MongoDB.",
+      "linkedin": "https://www.linkedin.com/in/rodrigoduran14",
+      "github": "https://github.com/RodrigoDuran14",
+      "photo": "src/assets/perfilSinFondo.png"
+    },
+    "education": {
+      "title": "Educación",
+      "button": "CERTIFICADO",
+      "info": [
+        {
+          "title": "Tecnicatura Universitaria en Programación - UTN-FRT",
+          "description": "Tecnicatura Universitaria en Programación cursada en UTN-FRT, con formación sólida en algoritmos, estructuras de datos, bases de datos, programación orientada a objetos, desarrollo web y metodologías de desarrollo de software. Enfoque práctico orientado a la resolución de problemas reales y al trabajo en equipo.",
+          "certified": ""
+        },
+        {
+          "title": "Desarrollador Javascript Full Stack en Udemy",
+          "description": "Curso completo de desarrollo web Full Stack con JavaScript, enfocado en la creación de aplicaciones web desde cero con HTML, CSS, JavaScript, Node.js, Express y React. Incluye manejo de API REST, programación asincrónica y arquitectura cliente-servidor. Formación práctica con proyectos reales.",
+          "certified": "https://www.udemy.com/certificate/UC-a3ae707d-4d14-4623-9de2-3b7ec0f6111e/"
+        },
+        {
+          "title": "Ciberseguridad ofensiva en EndPoint",
+          "description": "Curso presencial de Seguridad Ofensiva en EndPoint Security (6 meses, nivel intermedio), con foco en pentesting de redes WiFi, aplicaciones web y dispositivos Android, usando herramientas como Kali Linux, Wireshark, Nmap, Aircrack-ng y técnicas OWASP. Incluyó prácticas profesionales supervisadas en entornos reales.",
+          "certified": "https://drive.google.com/file/d/1IxEeSJkcVytFxgNATu3CoHMVH7dfn7Zi/view"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experiencia Laboral",
+      "button": "REPOSITORIO",
+      "info": [
+        {
+          "title": "Encargado de Ventas y Mantenimiento",
+          "place": "Casa Duran",
+          "years": "2014-2020",
+          "details": [
+            "Encargado de caja y reposicion de productos",
+            "control de stock y atención al cliente"
+          ]
+        },
+        {
+          "title": "Encargado de Producción",
+          "place": "Licoreria IlTico",
+          "years": "2020-2022",
+          "details": [
+            "Supervisión de preproducción y embotellado",
+            "Control de calidad y estibado de productos terminados"
+          ]
+        },
+        {
+          "title": "Mantenimiento eléctrico",
+          "place": "Federico Soluciones",
+          "years": "2023-Actualidad",
+          "details": [
+            "Mantenimiento eléctrico en sucursales de tiendas de electrodomésticos"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Proyectos",
+      "button": "REPOSITORIO",
+      "info": [
+        {
+          "name": "Clothing store Manager",
+          "description": "Desarrollé una app web full stack MERN para la gestión integral de una tienda de indumentaria, con control de ventas, stock, cuentas corrientes, devoluciones y reportes financieros. Incluye autenticación, sistema de roles y panel administrativo. Automatiza procesos clave como comisiones, cierres diarios y repartos entre socios. ",
+          "repo": "https://github.com/RodrigoDuran14/clothing-store-manager",
+          "demo": "demo",
+          "image": ""
+        },
+        {
+          "name": "Car Laundry",
+          "description": "Desarrollé una app web para la gestión integral de un lavadero de autos, con roles de usuario, notificaciones por WhatsApp, filtros avanzados, suscripciones y pagos electrónicos. Incluye control de lavados activos e inactivos y reportes por empleado. Actualmente integrando reserva de turnos y mejoras en suscripciones.",
+          "repo": "https://github.com/RodrigoDuran14/carLaundry",
+          "demo": "demo",
+          "image": ""
+        },
+        {
+          "name": "Offers Close to Your Home",
+          "description": "Desarrollé una app full stack de e-commerce en equipo ágil, con autenticación, pasarela de pagos, gestión de productos y usuarios, y panel administrativo. Participé en sprints semanales presentando avances al Product Owner, usando React, Node.js, PostgreSQL y otras tecnologías.",
+          "repo": "https://github.com/RodrigoDuran14/offers-close-to-your-home",
+          "demo": "demo",
+          "image": ""
+        },
+        {
+          "name": "Videogames",
+          "description": "Desarrollé una SPA con React que consume la API de RAWG para visualizar videojuegos, permitiendo su búsqueda, filtrado por género y origen, ordenamiento, y creación de nuevos juegos almacenados en base de datos. Utilicé JavaScript, React, Redux, Node.js, Express, Sequelize y PostgreSQL.",
+          "repo": "https://github.com/RodrigoDuran14/PIVideogames",
+          "demo": "demo",
+          "image": "src/assets/videogames.png"
+        },
+        {
+          "name": "Countries",
+          "description": "Desarrollé una SPA con React que consume la API de restcountries para visualizar paises, permitiendo su búsqueda, filtrado por continente y por tipo de actividad turística, ordenamiento, y creación de nuevas actividades turisticas almacenadas en base de datos. Utilicé JavaScript, React, Redux, Node.js, Express, Sequelize y PostgreSQL.",
+          "repo": "https://github.com/RodrigoDuran14/PICountries",
+          "demo": "demo",
+          "image": ""
+        }
+      ]
+    },
+    "skills": {
+      "title": "Habilidades",
+      "info": [
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "NodeJS"
+        },
+        {
+          "name": "MongoDB"
+        },
+        {
+          "name": "Git"
+        },
+        {
+          "name": "Express"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Django"
+        },
+        {
+          "name": "C#"
+        },
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Redux"
+        },
+        {
+          "name": "Sequelize"
+        },
+        {
+          "name": "SQLServer"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "Información de Contacto",
+      "name": "Nombre",
+      "mail": "Correo electrónico",
+      "message": "Tu Mensaje",
+      "button": "ENVIAR",
+      "email": "potroo145@gmail.com",
+      "phone": "3816983707",
+      "location": "Tucumán, Argentina",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar el mensaje. Inténtalo de nuevo.",
+      "sending": "ENVIANDO..."
+    }
+  }
+}
