@@ -49,7 +49,7 @@ const Projects = ({ data }) => {
                 <div className="p-6">
                   {/* Título clicable */}
                   <Link to={`/project/${slug}`}>
-                    <h3 className="text-xl font-semibold mb-3 hover:text-[var(--color-accent)] transition-colors">
+                    <h3 className="text-xl font-semibold mb-3 hover:text-accent transition-colors">
                       {project.name}
                     </h3>
                   </Link>
@@ -63,7 +63,7 @@ const Projects = ({ data }) => {
                       href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium rounded-lg transition-colors bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)]"
+                      className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium rounded-lg transition-colors bg-accent hover:bg-accent-dark"
                       onClick={(e) => e.stopPropagation()} // evita navegación accidental
                     >
                       <FaGithub size={16} />

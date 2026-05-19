@@ -64,7 +64,7 @@ const Navbar = ({ data, activeSection }) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm transition-colors hover:text-[var(--color-accent)] ${
+                className={`text-sm transition-colors hover:text-accent ${
                   activeSection === item.id
                     ? 'text-gray-900 font-medium'
                     : 'text-gray-500'
@@ -75,7 +75,7 @@ const Navbar = ({ data, activeSection }) => {
             ))}
             <button
               onClick={handleDownloadCV}
-              className="ml-4 px-5 py-2 text-white text-sm font-medium rounded-full transition-colors bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)]"
+              className="ml-4 px-5 py-2 text-white text-sm font-medium rounded-full transition-colors bg-accent hover:bg-accent-dark"
             >
               {data.nav.button}
             </button>

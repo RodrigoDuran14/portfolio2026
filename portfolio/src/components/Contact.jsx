@@ -55,7 +55,7 @@ const Contact = ({ data }) => {
               </h3>
 
               <div className="flex items-center gap-4 p-4 apple-card group hover:shadow-md transition-all">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors">
+                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-accent transition-colors">
                   <FiMail
                     size={20}
                     className="text-gray-600 group-hover:text-white"
@@ -65,7 +65,7 @@ const Contact = ({ data }) => {
                   <p className="text-sm text-gray-500">Email</p>
                   <a
                     href={`mailto:${contactData.email}`}
-                    className="text-gray-900 hover:text-[var(--color-accent)] transition-colors"
+                    className="text-gray-900 hover:text-accent transition-colors"
                   >
                     {contactData.email}
                   </a>
@@ -73,7 +73,7 @@ const Contact = ({ data }) => {
               </div>
 
               <div className="flex items-center gap-4 p-4 apple-card group hover:shadow-md transition-all">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors">
+                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-accent transition-colors">
                   <FiPhone size={20} className="text-gray-600 group-hover:text-white" />
                 </div>
                 <div>
@@ -81,7 +81,7 @@ const Contact = ({ data }) => {
                   <a
                     href={`https://wa.me/549${contactData.phone}?text=Hola%20vi%20tu%20portfolio%20y%20quiero%20contactarme%20con%20vos`}
                     target="_blank"
-                    className="text-gray-900 hover:text-[var(--color-accent)] transition-colors"
+                    className="text-gray-900 hover:text-accent transition-colors"
                   >
                     +54 {contactData.phone}
                   </a>
@@ -89,7 +89,7 @@ const Contact = ({ data }) => {
               </div>
 
               <div className="flex items-center gap-4 p-4 apple-card group hover:shadow-md transition-all">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors">
+                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-accent transition-colors">
                   <FiMapPin size={20} className="text-gray-600 group-hover:text-white" />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ const Contact = ({ data }) => {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 text-white font-medium rounded-xl transition-colors disabled:opacity-70 disabled:cursor-not-allowed bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)]"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 text-white font-medium rounded-xl transition-colors disabled:opacity-70 disabled:cursor-not-allowed bg-accent hover:bg-accent"
               >
                 {status === "sending" ? (
                   contactData.sending

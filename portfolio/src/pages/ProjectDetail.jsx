@@ -22,7 +22,7 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4">Proyecto no encontrado</h1>
-        <Link to="/" className="text-[var(--color-accent)] hover:underline">Volver al inicio</Link>
+        <Link to="/" className="text-accent hover:underline">Volver al inicio</Link>
       </div>
     );
   }
@@ -37,7 +37,7 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-white">
       <div className="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-md z-10">
         <div className="container-custom py-4">
-          <Link to="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-[var(--color-accent)] transition-colors">
+          <Link to="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-accent)] transition-colors">
             <FaArrowLeft size={16} />
             Volver al portfolio
           </Link>
@@ -59,7 +59,7 @@ const ProjectDetail = () => {
                       <img
                         src={getImageUrl(img)}
                         alt={`${project.name} - ${idx + 1}`}
-                        className="w-full h-auto object-cover max-h-[500px]"
+                        className="w-full h-auto object-cover max-h-125"
                         onError={(e) => e.target.src = 'https://placehold.co/1200x600/e2e8f0/1e293b?text=Imagen+no+disponible'}
                       />
                     </div>
@@ -87,7 +87,7 @@ const ProjectDetail = () => {
           {project.tech && project.tech.length > 0 && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <FaCode size={20} className="text-[var(--color-accent)]" />
+                <FaCode size={20} className="text-accent" />
                 Tecnologías utilizadas
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -108,7 +108,7 @@ const ProjectDetail = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white font-medium rounded-xl hover:bg-[var(--color-accent-dark)] transition-colors">
+            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-xl hover:bg-accent-dark transition-colors">
               <FaGithub size={20} />
               Ver repositorio
             </a>

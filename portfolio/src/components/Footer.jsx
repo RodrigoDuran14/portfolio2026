@@ -13,28 +13,28 @@ const Footer = ({data}) => {
           </p>
           
           <div className="flex gap-4">
-            <a href="https://github.com/RodrigoDuran14" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-accent)] transition-colors">
+            <a href="https://github.com/RodrigoDuran14" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
               <FaGithub size={20} />
             </a>
             <a
               href="https://www.linkedin.com/in/rodrigoduran14"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[var(--color-accent)] transition-colors"
+              className="text-gray-400 hover:text-accent transition-colors"
             >
               <FaLinkedin size={20} />
             </a>
             <a
               href={`mailto:${data.contact.email}`}
               target="_blank"
-              className="text-gray-400 hover:text-[var(--color-accent)] transition-colors"
+              className="text-gray-400 hover:text-accent transition-colors"
             >
               <FiMail size={20} />
             </a>
             <a
               href={`https://wa.me/549${data.contact.phone}?text=Hola%20vi%20tu%20portfolio%20y%20quiero%20contactarme%20con%20vos`}
               target="_blank"
-              className="text-gray-400 hover:text-[var(--color-accent)] transition-colors"
+              className="text-gray-400 hover:text-accent transition-colors"
             >
               <FaWhatsapp  size={20} />
             </a>

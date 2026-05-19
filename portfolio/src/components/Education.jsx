@@ -20,7 +20,7 @@ const Education = ({ data }) => {
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </div>
                 {item.certified && (
-                  <a href={item.certified} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium rounded-full transition-colors whitespace-nowrap bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)]">
+                  <a href={item.certified} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium rounded-full transition-colors whitespace-nowrap bg-accent hover:bg-accent-dark">
                     {educationData.button}
                     <FiExternalLink size={14} />
                   </a>

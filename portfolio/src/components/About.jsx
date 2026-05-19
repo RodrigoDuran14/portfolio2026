@@ -43,7 +43,7 @@ const About = ({ data }) => {
     href={aboutData.github}
     target="_blank"
     rel="noopener noreferrer"
-    className="p-3 bg-gray-100 rounded-full transition-colors hover:bg-[var(--color-accent)] group"
+    className="p-3 bg-gray-100 rounded-full transition-colors hover:bg-accent group"
   >
     <FaGithub size={22} className="text-gray-700 group-hover:text-white" />
   </a>
@@ -51,7 +51,7 @@ const About = ({ data }) => {
     href={aboutData.linkedin}
     target="_blank"
     rel="noopener noreferrer"
-    className="p-3 bg-gray-100 rounded-full transition-colors hover:bg-[var(--color-accent)] group"
+    className="p-3 bg-gray-100 rounded-full transition-colors hover:bg-accent group"
   >
     <FaLinkedin size={22} className="text-gray-700 group-hover:text-white" />
   </a>

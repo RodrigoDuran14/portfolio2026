@@ -43,7 +43,7 @@ const Skills = ({ data }) => {
                 className="flex flex-col items-center p-4 apple-card hover:shadow-md transition-all duration-300 animate-slide-up group"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="w-16 h-16 mb-3 flex items-center justify-center text-gray-700 group-hover:text-[var(--color-accent)] transition-colors">
+                <div className="w-16 h-16 mb-3 flex items-center justify-center text-gray-700 group-hover:text-accent transition-colors">
                   {IconComponent ? (
                     <IconComponent size={48} />
                   ) : (
