@@ -8,11 +8,6 @@ const Projects = ({ data }) => {
   // Función para generar slug igual que en ProjectDetail
   const getSlug = (name) => name.toLowerCase().replace(/\s+/g, '-');
 
-  const getImageUrl = (path) => {
-    if (!path) return null;
-    return path.replace('src/assets', '/assets');
-  };
-
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container-custom">
@@ -23,15 +18,15 @@ const Projects = ({ data }) => {
             return (
               <div
                 key={index}
-                className="apple-card overflow-hidden hover:shadow-lg transition-all duration-300 animate-slide-up"
+                className="apple-card overflow-hidden hover:shadow-lg transition-all duration-300 animate-slide-up "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Imagen clicable */}
-                <Link to={`/proyecto/${slug}`}>
+                <Link to={`/project/${slug}`}>
                   <div className="aspect-video bg-gray-100 overflow-hidden">
                     {project.image ? (
                       <img
-                        src={getImageUrl(project.image)}
+                        src={project.image}
                         alt={project.name}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
@@ -39,7 +34,7 @@ const Projects = ({ data }) => {
                         }}
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-400">
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 hover:scale-105">
                         {project.name}
                       </div>
                     )}
@@ -49,7 +44,7 @@ const Projects = ({ data }) => {
                 <div className="p-6">
                   {/* Título clicable */}
                   <Link to={`/project/${slug}`}>
-                    <h3 className="text-xl font-semibold mb-3 hover:text-accent transition-colors">
+                    <h3 className="text-xl font-semibold mb-3 hover:text-accent transition-colors  hover:scale-105 duration-500">
                       {project.name}
                     </h3>
                   </Link>

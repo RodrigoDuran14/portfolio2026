@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { usePortfolio } from './context/PortfolioContext';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
+import ScrollToTop from './components/ScrollToTop';
 
 const AppRoutes = () => {
   const { data, loading } = usePortfolio();
@@ -25,6 +26,7 @@ const AppRoutes = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppRoutes />
     </BrowserRouter>
   );

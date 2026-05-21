@@ -157,7 +157,7 @@ const Contact = ({ data }) => {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 text-white font-medium rounded-xl transition-colors disabled:opacity-70 disabled:cursor-not-allowed bg-accent hover:bg-accent"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 text-white font-medium rounded-xl transition-colors disabled:opacity-70 disabled:cursor-not-allowed bg-accent hover:bg-accent-dark"
               >
                 {status === "sending" ? (
                   contactData.sending

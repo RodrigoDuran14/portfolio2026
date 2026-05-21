@@ -8,9 +8,12 @@ const Footer = ({data}) => {
     <footer className="bg-white border-t border-gray-100 py-8">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <img src={data.nav.photo} alt="" className="w-60"/>
+
           <p className="text-sm text-gray-500">
-            © {currentYear} Rodrigo Martín Durán. Todos los derechos reservados.
+            © {currentYear} Rodrigo Martin Durán. Todos los derechos reservados.
           </p>
+
           
           <div className="flex gap-4">
             <a href="https://github.com/RodrigoDuran14" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
