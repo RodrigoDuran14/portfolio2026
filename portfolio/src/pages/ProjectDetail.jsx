@@ -22,7 +22,7 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4">Proyecto no encontrado</h1>
-        <Link to="/" className="text-[var(--color-accent)] hover:underline">
+        <Link to="/" className="text-accent hover:underline">
           Volver al inicio
         </Link>
       </div>
@@ -50,7 +50,7 @@ const ProjectDetail = () => {
         <div className="container-custom py-4">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[var(--color-accent)] transition-colors"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-accent transition-colors"
           >
             <FaArrowLeft size={16} />
             Volver al portfolio
@@ -116,7 +116,7 @@ const ProjectDetail = () => {
           {project.tech && project.tech.length > 0 && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <FaCode size={20} className="text-[var(--color-accent)]" />
+                <FaCode size={20} className="text-accent" />
                 Tecnologías utilizadas
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -141,13 +141,13 @@ const ProjectDetail = () => {
           {project.highlights && project.highlights.length > 0 && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <FaStar size={20} className="text-[var(--color-accent)]" />
+                <FaStar size={20} className="text-accent" />
                 Características destacadas
               </h2>
               <ul className="space-y-2">
                 {project.highlights.map((item, idx) => (
                   <li key={idx} className="flex gap-2 text-gray-700">
-                    <span className="text-[var(--color-accent)] mt-1">•</span>
+                    <span className="text-accent mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -159,13 +159,13 @@ const ProjectDetail = () => {
           {project.learnings && project.learnings.length > 0 && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <FaGraduationCap size={20} className="text-[var(--color-accent)]" />
+                <FaGraduationCap size={20} className="text-accent" />
                 Aprendizajes clave
               </h2>
               <ul className="space-y-2">
                 {project.learnings.map((item, idx) => (
                   <li key={idx} className="flex gap-2 text-gray-700">
-                    <span className="text-[var(--color-accent)] mt-1">•</span>
+                    <span className="text-accent mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -177,7 +177,7 @@ const ProjectDetail = () => {
           {project.results && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <FaChartLine size={20} className="text-[var(--color-accent)]" />
+                <FaChartLine size={20} className="text-accent" />
                 Resultados y conclusión
               </h2>
               <p className="text-gray-700 leading-relaxed">{project.results}</p>
@@ -190,7 +190,7 @@ const ProjectDetail = () => {
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white font-medium rounded-xl hover:bg-[var(--color-accent-dark)] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-xl hover:bg-accent-dark transition-colors"
             >
               <FaGithub size={20} />
               Ver repositorio

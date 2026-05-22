@@ -1,4 +1,5 @@
 import { FiExternalLink } from 'react-icons/fi'
+import FadeInSection from './FadeInSection'
 
 const Education = ({ data }) => {
   const educationData = data.education
@@ -6,6 +7,7 @@ const Education = ({ data }) => {
   return (
     <section id="education" className="py-20 bg-gray-50">
       <div className="container-custom">
+        <FadeInSection>
         <h2 className="section-title">{educationData.title}</h2>
         <div className="space-y-6 max-w-3xl mx-auto">
           {educationData.info.map((item, index) => (
@@ -14,6 +16,7 @@ const Education = ({ data }) => {
               className="apple-card p-6 md:p-8 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <FadeInSection direction='left' >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
@@ -26,9 +29,11 @@ const Education = ({ data }) => {
                   </a>
                 )}
               </div>
+              </FadeInSection>
             </div>
           ))}
         </div>
+        </FadeInSection>
       </div>
     </section>
   )

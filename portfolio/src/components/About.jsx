@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import FadeInSection from "./FadeInSection";
 
 const About = ({ data }) => {
   const aboutData = data.about;
@@ -6,9 +7,11 @@ const About = ({ data }) => {
   return (
     <section id="about" className="pt-32 pb-20 md:pt-60 md:pb-80 bg-white">
       <div className="container-custom">
+        <FadeInSection>
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/3 flex justify-center">
             <div className="relative">
+              <FadeInSection direction="left">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-gray-100 shadow-sm ">
                 <img
                   src={
@@ -23,10 +26,12 @@ const About = ({ data }) => {
                   }}
                 />
               </div>
+              </FadeInSection>
             </div>
           </div>
 
           <div className="md:w-2/3 text-center md:text-left">
+          <FadeInSection direction="right">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
               Rodrigo Martin Durán
             </h1>
@@ -34,6 +39,7 @@ const About = ({ data }) => {
             <p className="text-gray-600 leading-relaxed mb-8">
               {aboutData.long}
             </p>
+            </FadeInSection>
 
             <div className="flex gap-4 justify-center md:justify-start">
               <a
@@ -61,6 +67,7 @@ const About = ({ data }) => {
             </div>
           </div>
         </div>
+        </FadeInSection>
       </div>
     </section>
   );

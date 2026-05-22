@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';  // ← importar Link
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import FadeInSection from './FadeInSection';
 
 const Projects = ({ data }) => {
   const projectsData = data.projects;
@@ -11,6 +12,7 @@ const Projects = ({ data }) => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container-custom">
+        <FadeInSection>
         <h2 className="section-title">{projectsData.title}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.info.map((project, index) => {
@@ -21,6 +23,7 @@ const Projects = ({ data }) => {
                 className="apple-card overflow-hidden hover:shadow-lg transition-all duration-300 animate-slide-up "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <FadeInSection>
                 {/* Imagen clicable */}
                 <Link to={`/project/${slug}`}>
                   <div className="aspect-video bg-gray-100 overflow-hidden">
@@ -78,10 +81,12 @@ const Projects = ({ data }) => {
                     )}
                   </div>
                 </div>
+                </FadeInSection>
               </div>
             );
           })}
         </div>
+        </FadeInSection>
       </div>
     </section>
   );

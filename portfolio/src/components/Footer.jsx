@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaWhatsapp  } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
+import FadeInSection from './FadeInSection'
 
 const Footer = ({data}) => {
   const currentYear = new Date().getFullYear()
@@ -7,6 +8,7 @@ const Footer = ({data}) => {
   return (
     <footer className="bg-white border-t border-gray-100 py-8">
       <div className="container-custom">
+        <FadeInSection>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <img src={data.nav.photo} alt="" className="w-60"/>
 
@@ -43,6 +45,7 @@ const Footer = ({data}) => {
             </a>
           </div>
         </div>
+        </FadeInSection>
       </div>
     </footer>
   )

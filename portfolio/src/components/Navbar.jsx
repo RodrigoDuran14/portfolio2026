@@ -1,5 +1,6 @@
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useState, useEffect } from 'react'
+import FadeInSection from './FadeInSection'
 
 const Navbar = ({ data, activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -51,6 +52,7 @@ const Navbar = ({ data, activeSection }) => {
       }`}
     >
       <div className="container-custom">
+        <FadeInSection direction='bottom'>
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection('about')}
@@ -114,6 +116,7 @@ const Navbar = ({ data, activeSection }) => {
             </div>
           </div>
         )}
+        </FadeInSection>
       </div>
     </nav>
   )
