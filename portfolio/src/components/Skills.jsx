@@ -2,7 +2,7 @@ import {
   DiHtml5, DiCss3, DiJavascript1, DiReact, DiNodejsSmall, 
   DiMongodb, DiGit, DiPostgresql, DiPython, DiDjango, DiMsqlServer  
 } from 'react-icons/di';
-import { SiExpress, SiRedux, SiSequelize } from 'react-icons/si';
+import { SiExpress, SiRedux, SiSequelize, SiTailwindcss, SiFirebase, SiCloudinary, SiVite   } from 'react-icons/si';
 import { TbBrandCSharp } from "react-icons/tb";
 
 
@@ -25,7 +25,11 @@ const Skills = ({ data }) => {
       'Python': DiPython,
       'Redux': SiRedux,
       'Sequelize': SiSequelize,
-      'SQLServer': DiMsqlServer ,
+      'SQLServer': DiMsqlServer,
+      'TailwindCSS': SiTailwindcss,
+      'Firebase': SiFirebase,
+      'Cloudinary': SiCloudinary,
+      'Vite': SiVite 
     };
     return icons[skillName] || null;
   };
@@ -43,7 +47,7 @@ const Skills = ({ data }) => {
                 className="flex flex-col items-center p-4 apple-card hover:shadow-md transition-all duration-300 animate-slide-up group"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="w-16 h-16 mb-3 flex items-center justify-center text-gray-700 group-hover:text-[var(--color-accent)] transition-colors">
+                <div className="w-16 h-16 mb-3 flex items-center justify-center text-gray-700 group-hover:text-accent transition-colors">
                   {IconComponent ? (
                     <IconComponent size={48} />
                   ) : (

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Definir tema personalizado (opcional, similar al anterior) */
+/* Definir tema personalizado */
 @theme {
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
@@ -34,7 +34,7 @@
   }
 }
 
-/* Utilidades personalizadas (reemplazo de @layer components) */
+/* Utilidades personalizadas (NUNCA dentro de @layer) */
 @utility container-custom {
   max-width: 72rem;
   margin-left: auto;
@@ -83,7 +83,24 @@
   }
 }
 
-/* Estilos base */
+@utility btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: var(--color-accent-dark);
+  }
+}
+
+@utility text-accent {
+  color: var(--color-accent);
+}
+
+@utility border-accent {
+  border-color: var(--color-accent);
+}
+
+/* Estilos base - @layer sí puede usarse aquí */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -94,23 +111,5 @@
     color: var(--color-gray-900);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-@layer components {
-  @utility btn-primary {
-    background-color: var(--color-accent);
-    color: white;
-    transition: background-color 0.2s;
-  }
-  @utility btn-primary:hover {
-    background-color: var(--color-accent-dark);
-  }
-
-  @utility text-accent {
-    color: var(--color-accent);
-  }
-  @utility border-accent {
-    border-color: var(--color-accent);
   }
 }

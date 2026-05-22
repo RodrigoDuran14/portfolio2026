@@ -56,7 +56,7 @@ const Navbar = ({ data, activeSection }) => {
             onClick={() => scrollToSection('about')}
             className="text-xl font-semibold tracking-tight hover:text-gray-600 transition-colors"
           >
-            RD
+            <img src={data.nav.image} className='min-w-22.5 w-30' />
           </button>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -64,7 +64,7 @@ const Navbar = ({ data, activeSection }) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm transition-colors hover:text-[var(--color-accent)] ${
+                className={`text-sm transition-colors hover:text-accent ${
                   activeSection === item.id
                     ? 'text-gray-900 font-medium'
                     : 'text-gray-500'
@@ -75,7 +75,7 @@ const Navbar = ({ data, activeSection }) => {
             ))}
             <button
               onClick={handleDownloadCV}
-              className="ml-4 px-5 py-2 text-white text-sm font-medium rounded-full transition-colors bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)]"
+              className="ml-4 px-5 py-2 text-white text-sm font-medium rounded-full transition-colors bg-accent hover:bg-accent-dark min-w-18"
             >
               {data.nav.button}
             </button>
@@ -107,7 +107,7 @@ const Navbar = ({ data, activeSection }) => {
               ))}
               <button
                 onClick={handleDownloadCV}
-                className="mt-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors"
+                className="mt-2 px-4 py-2 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
               >
                 {data.nav.button}
               </button>

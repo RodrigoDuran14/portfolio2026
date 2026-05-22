@@ -1,7 +1,9 @@
 {
   "es": {
     "nav": {
-      "button": "DESCARGAR CV"
+      "button": "DESCARGAR CV",
+      "image": "assets/logocortosinfondo.png",
+      "photo": "assets/logolargosinfondo.png"
     },
     "section": {
       "about": "Sobre mí",
@@ -17,7 +19,7 @@
       "long": "Soy Rodrigo Martín Durán, un desarrollador full stack a punto de finalizar la Tecnicatura en Programación. Me especializo en el desarrollo de aplicaciones web modernas utilizando tecnologías como React, Node.js y MongoDB.",
       "linkedin": "https://www.linkedin.com/in/rodrigoduran14",
       "github": "https://github.com/RodrigoDuran14",
-      "photo": "src/assets/perfilSinFondo.png"
+      "photo": "assets/perfilSombreado.png"
     },
     "education": {
       "title": "Educación",
@@ -77,39 +79,343 @@
       "button": "REPOSITORIO",
       "info": [
         {
-          "name": "Clothing store Manager",
-          "description": "Desarrollé una app web full stack MERN para la gestión integral de una tienda de indumentaria, con control de ventas, stock, cuentas corrientes, devoluciones y reportes financieros. Incluye autenticación, sistema de roles y panel administrativo. Automatiza procesos clave como comisiones, cierres diarios y repartos entre socios. ",
-          "repo": "https://github.com/RodrigoDuran14/clothing-store-manager",
-          "demo": "demo",
-          "image": ""
+          "name": "Clothing Store Manager",
+          "description": "Sistema completo de gestión para una tienda de indumentaria, diseñado para manejar tanto la operación física como un e‑commerce integrado. Permite administrar usuarios, productos (con variantes de talle y color), categorías, proveedores, clientes, vendedores, ventas, devoluciones, promociones, cuentas bancarias y un sistema multi‑socio con cajas independientes y división automática de ingresos. Incluye facturación electrónica (con simulación de AFIP), reportes avanzados (estado de resultados, flujo de caja, rotación de stock, proyección de reabastecimiento, análisis por socio, etc.), notificaciones multi‑canal (email, in‑app) y un módulo de caja diaria con control de diferencias. El backend está construido con Node.js, Express y MongoDB, mientras que el frontend está desarrollado con React 19, Redux Toolkit, Tailwind CSS y Vite. La autenticación es JWT con roles (admin, socio, empleado). La arquitectura es modular, escalable y preparada para integrar pasarelas de pago reales y facturación fiscal.",
+          "repo": "https://github.com/tuusuario/clothing-store-manager",
+          "demo": "https://clothing-manager-demo.vercel.app",
+          "image": "../assets/clothingManager/dashboard.png",
+          "images": [
+            "src/assets/clothingManager/dashboard.png",
+            "src/assets/clothingManager/ventas.png",
+            "src/assets/clothingManager/stock.png",
+            "src/assets/clothingManager/clientes.png",
+            "src/assets/clothingManager/informe_ganancias_socio.png",
+            "src/assets/clothingManager/cierre_caja.png",
+            "src/assets/clothingManager/factura_electronica.png",
+            "src/assets/clothingManager/notificaciones.png"
+          ],
+          "tech": [
+            "React 19",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Vite",
+            "Node.js",
+            "Express",
+            "MongoDB / Mongoose",
+            "JWT",
+            "Axios",
+            "React Router DOM v6",
+            "date‑fns",
+            "React Hot Toast",
+            "React Icons",
+            "Recharts",
+            "React Hook Form",
+            "Zod",
+            "ExcelJS",
+            "Puppeteer / @react-pdf/renderer",
+            "Nodemailer",
+            "Socket.io",
+            "Multer",
+            "Cloudinary"
+          ],
+          "highlights": [
+            "CRUD completo de usuarios, productos (con variantes de talle y color), categorías (anidadas), proveedores, clientes, vendedores, promociones y cuentas bancarias, con validaciones robustas y soft‑delete.",
+            "Gestión de ventas multipago (efectivo, tarjeta, transferencia, cuenta corriente) con verificación de stock antes de confirmar y actualización automática del inventario.",
+            "Sistema multi‑socio: cada socio tiene sus propias categorías / productos, una caja independiente y cuentas bancarias. Los ingresos de cada venta se dividen automáticamente entre los socios según los productos vendidos (usando PartnerSplit).",
+            "Cuenta corriente para clientes con límite de crédito, registro de pagos parciales, alertas automáticas por umbral de uso y reporte de antigüedad de deuda.",
+            "Módulo de devoluciones con flujo de aprobación (pendiente → aprobada/rechazada → procesada), restauración de stock, reembolso a cuenta corriente o generación de vales de compra.",
+            "Promociones avanzadas: descuentos porcentuales o fijos, promociones por código (cupones), “compre X lleve Y”, con condiciones (monto mínimo, productos/categorías específicas) y prioridades. Aplicación automática en el carrito de ventas.",
+            "Facturación electrónica: generación de facturas tipos A, B, C y tickets desde ventas, con números correlativos por punto de venta, emisión de PDF, integración simulada con AFIP (CAE y QR) y envío por email.",
+            "Caja diaria por socio: apertura, cierre con balance esperado vs. real, registro de gastos, retiros y depósitos, detección de diferencias, reporte de discrepancias y resolución administrativa.",
+            "Reportes y análisis: más de 15 reportes integrados (Estado de Resultados, Flujo de Caja, Rotación de Stock, Proyección de Reabastecimiento, Ventas por socio, Productividad por vendedor, Ventas por hora/día, etc.) con exportación a Excel y gráficos interactivos.",
+            "Notificaciones multi‑canal: plantillas de email configurables, envío automático de alertas de stock bajo, límite de crédito, confirmación de compra, devolución procesada, promociones por vencer, etc. También se almacenan notificaciones in‑app para usuarios del sistema.",
+            "Panel de control (dashboard) con KPIs en tiempo real: ventas del día/semana/mes, productos más vendidos, clientes top, alertas de stock y crédito, gráficos de tendencias.",
+            "Autenticación segura con JWT, roles (admin, socio, empleado) y rutas protegidas tanto en backend como en frontend.",
+            "Diseño responsive completo: menú lateral colapsable, tablas adaptables, formularios con modales y tema claro/oscuro (opcional).",
+            "Arquitectura modular en el backend (models, controllers, services, routes, validators, middleware) y en el frontend (features, slices, hooks, servicios API con RTK Query)."
+          ],
+          "learnings": [
+            "Diseño de una base de datos relacional compleja con Mongoose, manejando referencias entre colecciones (productos ↔ categorías, ventas ↔ clientes ↔ vendedores, devoluciones ↔ ventas, etc.) y uso de populate para consultas eficientes.",
+            "Implementación de un sistema multi‑socio con división automática de ingresos: creación del modelo Partner, asignación de categorías/productos a cada socio, lógica de partición de pagos y registro de movimientos en cajas/cuentas independientes.",
+            "Desarrollo de un motor de promociones dinámico que evalúa condiciones (monto mínimo, productos/categorías, fechas) y aplica descuentos en tiempo real durante la creación de la venta.",
+            "Integración de servicios externos simulados (AFIP para facturación electrónica) con capacidad de reemplazar por APIs reales. Generación de PDFs con Puppeteer + Handlebars y envío de correos con Nodemailer.",
+            "Creación de un sistema de reportes avanzados usando agregaciones de MongoDB y servicios separados, exportando a Excel con ExcelJS y generando datos para gráficos (Recharts en el frontend).",
+            "Gestión de sesiones de caja por socio con control de apertura/cierre, cálculo del balance esperado a partir de movimientos del día, detección de diferencias y registro de discrepancias.",
+            "Implementación de notificaciones asíncronas con colas (usando node‑cron para alertas programadas) y plantillas Handlebars para emails, además de un sistema de notificaciones in‑app con estado leído/no leído.",
+            "Uso de RTK Query para el manejo de caché, paginación y optimización de peticiones en el frontend. Integración de formularios con React Hook Form + Zod para validación y mejora de UX.",
+            "Creación de un middleware de autorización basado en roles y también en pertenencia a socio (partnerAccess) para filtrar datos en el backend y evitar fugas de información entre socios.",
+            "Despliegue completo de la aplicación en entornos de producción (Vercel para frontend, Railway/Render para backend, MongoDB Atlas) con variables de entorno y scripts de migración."
+          ],
+          "results": "El sistema está completamente funcional y probado, permitiendo a los dueños de una tienda de ropa gestionar todo el negocio (inventario, ventas, clientes, finanzas, socios) desde una única plataforma. La división automática de ingresos entre socios elimina disputas manuales, y los reportes financieros detallados facilitan la toma de decisiones. La integración de facturación electrónica y notificaciones automatizadas mejora la eficiencia administrativa. El código está organizado en capas, con buenas prácticas de separación de responsabilidades, testing básico y documentación de API (Swagger opcional). El proyecto demuestra habilidades full‑stack avanzadas: modelado de datos complejo, lógica de negocio intensiva, integración de servicios externos (email, PDF, facturación) y una interfaz moderna con React + Redux Toolkit + Tailwind."
         },
         {
-          "name": "Car Laundry",
-          "description": "Desarrollé una app web para la gestión integral de un lavadero de autos, con roles de usuario, notificaciones por WhatsApp, filtros avanzados, suscripciones y pagos electrónicos. Incluye control de lavados activos e inactivos y reportes por empleado. Actualmente integrando reserva de turnos y mejoras en suscripciones.",
+          "name": "CarLaundry",
+          "description": "Sistema completo de gestión para un lavadero de autos. Permite administrar clientes, vehículos, empleados, tipos de lavado y el historial de lavados con control de estado (pendiente, en proceso, terminado). Incluye panel de control con métricas en tiempo real, búsquedas avanzadas, filtros dinámicos, notificaciones por WhatsApp (usando Venom‑bot) y autenticación JWT. El frontend está desarrollado con React y Redux Toolkit, mientras que el backend utiliza Node.js, Express y MongoDB. Todo el diseño es responsive y moderno con Tailwind CSS.",
           "repo": "https://github.com/RodrigoDuran14/carLaundry",
-          "demo": "demo",
-          "image": ""
+          "demo": "",
+          "image": "../assets/carLaundry/dashboardCarLaundry.png",
+          "images": [
+            "src/assets/carLaundry/dashboardCarLaundry2.png",
+            "src/assets/carLaundry/editarClienteCarLaundry.png",
+            "src/assets/carLaundry/clienteCarLaundry.png",
+            "src/assets/carLaundry/empleadosCarLaundry.png",
+            "src/assets/carLaundry/lavadodetailcompletado.png",
+            "src/assets/carLaundry/loginCarLaundry.png",
+            "src/assets/carLaundry/lavadosCarLaundry.png",
+            "src/assets/carLaundry/detalleLavadoCarLaundry.png",
+            "src/assets/carLaundry/editarClienteCarLaundry.png",
+            "src/assets/carLaundry/formAgregarVehiculoCarLaundry.png",
+            "src/assets/carLaundry/lavadosFiltroCarLaundry.png",
+            "src/assets/carLaundry/nuevoLavado2CarLaundry.png",
+            "src/assets/carLaundry/nuevoLavadoCarLaundry.png",
+            "src/assets/carLaundry/vehiculoCarLaundry.png"
+          ],
+          "tech": [
+            "React 19",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Vite",
+            "Node.js",
+            "Express",
+            "MongoDB / Mongoose",
+            "JWT (autenticación)",
+            "Axios",
+            "React Router DOM",
+            "date‑fns",
+            "React Hot Toast",
+            "React Icons",
+            "Venom‑bot (WhatsApp API)",
+            "Socket.io (QR dinámico)"
+          ],
+          "highlights": [
+            "CRUD completo de clientes, empleados, vehículos y tipos de lavado con validación de formularios y modales integrados.",
+            "Gestión de lavados con múltiples selecciones (varios tipos de lavado y varios empleados asignados por lavado).",
+            "Filtros dinámicos globales (por estado, fechas, cliente, vehículo, tipo de lavado, empleado) sincronizados con Redux.",
+            "Dashboard interactivo con gráficos de lavados por día, ingresos mensuales, servicios más populares y tarjetas clickeables que llevan a la lista de lavados con el filtro aplicado.",
+            "Notificaciones automáticas por WhatsApp a los clientes cuando el lavado está listo (integración con Venom‑bot y Socket.io para mostrar el QR en el frontend).",
+            "Autenticación segura con JWT y roles (administrador / empleado).",
+            "Diseño responsive completo: menú lateral adaptable, sidebar ocultable en móvil, modales con animaciones y fondo con blur.",
+            "Búsquedas en tiempo real con debounce (por nombre, DNI, teléfono, matrícula, etc.) y paginación implícita.",
+            "Borrado lógico (archivar / restaurar) de lavados y activación/desactivación de clientes, empleados, vehículos y servicios.",
+            "Cierre de sesión de WhatsApp desde el panel de administración (fuerza la regeneración del QR)."
+          ],
+          "learnings": [
+            "Integración completa de un backend REST con MongoDB y Mongoose, diseñando relaciones entre colecciones (cliente ↔ vehículo, lavado ↔ empleado, etc.).",
+            "Implementación de autenticación JWT con middleware de verificación y protección de rutas en el frontend.",
+            "Uso avanzado de Redux Toolkit para manejo de estado global, incluyendo filtros complejos y sincronización entre componentes (ej. filtros persistentes entre Dashboard y lista de lavados).",
+            "Desarrollo de modales reutilizables con animaciones y manejo de scroll, y formularios dinámicos con validación y feedback visual.",
+            "Comunicación en tiempo real con Socket.io para mostrar el QR de WhatsApp en el frontend sin necesidad de acceder a la consola del servidor.",
+            "Mejora de la experiencia de usuario con notificaciones toast (react‑hot‑toast) y transiciones suaves (Tailwind).",
+            "Optimización de consultas a la base de datos con populate y filtrado por múltiples criterios en el backend.",
+            "Diseño de un dashboard con métricas reales usando date‑fns y cálculos de ingresos / lavados por períodos (día, semana, mes).",
+            "Manejo de selección múltiple en formularios (empleados y tipos de lavado) y envío de arrays al backend.",
+            "Despliegue y configuración de variables de entorno para conectar frontend, backend y base de datos en producción."
+          ],
+          "results": "El sistema está completamente funcional, permitiendo al dueño del lavadero gestionar todos los aspectos del negocio desde una única interfaz moderna e intuitiva. La integración con WhatsApp mejora la comunicación con los clientes, reduciendo llamadas y acelerando la logística. El código está estructurado de forma modular, con buenas prácticas de separación de responsabilidades (features, slices, servicios). El proyecto demuestra la capacidad de desarrollar una aplicación full‑stack completa, desde la planificación de la base de datos hasta la implementación de notificaciones en tiempo real, pasando por un frontend dinámico y responsive."
         },
         {
-          "name": "Offers Close to Your Home",
-          "description": "Desarrollé una app full stack de e-commerce en equipo ágil, con autenticación, pasarela de pagos, gestión de productos y usuarios, y panel administrativo. Participé en sprints semanales presentando avances al Product Owner, usando React, Node.js, PostgreSQL y otras tecnologías.",
+          "name": "Offers Close To Your Home",
+          "description": "E-commerce completo con geolocalización que conecta comercios y usuarios cercanos a través de ofertas personalizadas. Incluye un backend robusto con Node.js/Express y PostgreSQL, un frontend para usuarios finales (con carrito de compras, autenticación, mapas y carruseles) y un panel de administración para que los comercios gestionen sus productos y promociones. El sistema está construido con una arquitectura de monorepo, separando claramente las responsabilidades.",
           "repo": "https://github.com/RodrigoDuran14/offers-close-to-your-home",
-          "demo": "demo",
-          "image": ""
+          "demo": "https://tu-demo.com",
+          "image": "../../public/assets/JustOffers/homeOffers.png",
+          "images": [
+            "src/assets/JustOffers/categoriasOffers.png",
+            "src/assets/JustOffers/detalleProductoOffers.png",
+            "src/assets/JustOffers/filtrosProductos.png",
+            "src/assets/JustOffers/indumentariaOffers.png",
+            "src/assets/JustOffers/loginOffers.png",
+            "src/assets/JustOffers/opinionesProductosOffers.png",
+            "src/assets/JustOffers/quienesSomos.png"
+          ],
+          "tech": [
+            "React 17",
+            "Redux",
+            "Redux Thunk",
+            "React Router DOM",
+            "Styled Components",
+            "Formik",
+            "Axios",
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
+            "Sequelize",
+            "JWT",
+            "Bcrypt",
+            "Nodemailer",
+            "SendGrid",
+            "Cloudinary",
+            "Firebase",
+            "Google Maps APIs",
+            "Mocha",
+            "Chai",
+            "Supertest"
+          ],
+          "highlights": [
+            "E-commerce funcional con carrito de compras persistente (localStorage) y gestión de productos",
+            "Autenticación segura con JWT y encriptación de contraseñas con bcrypt",
+            "Dos frontends diferenciados: client_users (para el público) y client_admin (panel de control para comercios)",
+            "Base de datos relacional (PostgreSQL) con ORM Sequelize para modelado y consultas",
+            "Subida y optimización de imágenes con Cloudinary",
+            "Envío de emails transaccionales (bienvenida, recuperación de contraseña, notificaciones de pedidos) con Nodemailer + SendGrid",
+            "Geolocalización y mapas (integración con Google Maps APIs) para mostrar ofertas cercanas",
+            "Pruebas unitarias y de integración con Mocha, Chai y Supertest",
+            "Arquitectura de monorepo con separación clara de responsabilidades (backend, frontend usuarios, frontend admin)",
+            "Uso de Redux Thunk para operaciones asíncronas (llamadas a la API, autenticación, carrito)"
+          ],
+          "learnings": [
+            "Construcción de un e-commerce completo desde cero, cubriendo tanto backend como frontend",
+            "Manejo avanzado del estado global con Redux y Redux Thunk (múltiples slices, acciones asíncronas, persistencia)",
+            "Implementación de autenticación y autorización con JWT en una API REST",
+            "Diseño de esquemas de base de datos relacional y uso de Sequelize para migraciones y relaciones",
+            "Integración de múltiples servicios de terceros (Cloudinary, SendGrid, Google Maps, Firebase) en un solo proyecto",
+            "Estrategias de testing para backend (Mocha, Chai, Supertest) y frontend (componentes, reducers)",
+            "Organización de un monorepo con scripts y dependencias compartidas (o independientes)",
+            "Manejo de sesiones, cookies y almacenamiento local para carritos de compra",
+            "Implementación de formularios complejos con Formik y validaciones personalizadas",
+            "Despliegue y configuración de variables de entorno en entornos de producción"
+          ],
+          "results": "Proyecto funcional y escalable que demuestra la capacidad de construir una plataforma de comercio electrónico con geolocalización, integración de múltiples servicios cloud y buenas prácticas de desarrollo. Aunque es un proyecto personal/complejo, refleja habilidades full‑stack avanzadas y puede servir como base para soluciones reales de marketplace local."
         },
         {
-          "name": "Videogames",
-          "description": "Desarrollé una SPA con React que consume la API de RAWG para visualizar videojuegos, permitiendo su búsqueda, filtrado por género y origen, ordenamiento, y creación de nuevos juegos almacenados en base de datos. Utilicé JavaScript, React, Redux, Node.js, Express, Sequelize y PostgreSQL.",
-          "repo": "https://github.com/RodrigoDuran14/PIVideogames",
-          "demo": "demo",
-          "image": "src/assets/videogames.png"
+          "name": "MiniMarket Manager",
+          "description": "Sistema completo de gestión para minimercados con múltiples sucursales, secciones internas (carnicería, pollería, verdulería, panadería, fiambrería), punto de venta unificado, control de stock por sucursal, cuenta corriente de clientes, gestión de empleados y sueldos, proveedores, compras, promociones, caja electrónica con conciliación bancaria, tickets de sección con código de barras y agrupación, dashboard ejecutivo, reportes exportables (Excel/PDF), notificaciones en tiempo real (Socket.IO) y autenticación por roles. El backend está desarrollado con Node.js, Express y MongoDB; el frontend con React, Redux Toolkit, Tailwind CSS y Vite. Incluye impresión de tickets térmicos, generación de códigos de barras (bwip-js), y tareas programadas con node-cron.",
+          "repo": "https://github.com/tuusuario/minimarket-manager",
+          "demo": "",
+          "image": "../assets/minimarket/dashboard.png",
+          "images": [
+            "../assets/minimarket/login.png",
+            "../assets/minimarket/dashboard.png",
+            "../assets/minimarket/punto-venta.png",
+            "../assets/minimarket/ticket-seccion.png",
+            "../assets/minimarket/productos.png",
+            "../assets/minimarket/clientes.png",
+            "../assets/minimarket/empleados.png",
+            "../assets/minimarket/caja.png",
+            "../assets/minimarket/reportes.png",
+            "../assets/minimarket/promociones.png",
+            "../assets/minimarket/sucursales.png",
+            "../assets/minimarket/cierres-caja.png"
+          ],
+          "tech": [
+            "React 19",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Vite",
+            "Node.js",
+            "Express",
+            "MongoDB / Mongoose",
+            "JWT (autenticación)",
+            "Socket.IO",
+            "Axios",
+            "React Router DOM",
+            "React Hook Form + Zod",
+            "React Hot Toast",
+            "date-fns",
+            "Recharts",
+            "QRCode.react",
+            "bcryptjs",
+            "express-validator",
+            "winston",
+            "exceljs",
+            "pdfkit",
+            "bwip-js",
+            "node-cron",
+            "multer",
+            "nodemailer"
+          ],
+          "highlights": [
+            "Modelo unificado de productos con `branchStocks` (precio, stock actual y mínimo por sucursal), permitiendo carga centralizada desde oficina sin duplicar datos.",
+            "Generación de tickets por sección con estrategia de ciclo atómico (MongoDB $inc) y formato corto de hasta 9 caracteres (ej. `1C0112345`).",
+            "Agrupación configurable de secciones por sucursal: múltiples áreas (pollería, panadería, fiambrería) emiten un único ticket combinado con código `G`.",
+            "Código de barras para cada ticket (`bwip-js`), con endpoint de imagen PNG e impresión térmica automática desde la tablet del empleado.",
+            "Módulo de caja completo: apertura/cierre con montos por método de pago (efectivo, tarjeta crédito/débito, transferencia, QR), movimientos manuales, reporte Zeta en JSON/Excel/PDF.",
+            "Configuración de múltiples cuentas bancarias por sucursal, asignación a métodos de pago y reporte de ingresos por cuenta sin conciliación automática.",
+            "Cuenta corriente de clientes con gestión de pagos, estado de cuenta, vencimiento de deuda y cálculo de intereses por mora.",
+            "Promociones flexibles por producto, sección o total de compra, con reglas de días/horarios, prioridad, y cálculo automático en el punto de venta.",
+            "Dashboard ejecutivo con métricas en tiempo real (ventas del día, tickets pendientes, stock bajo, deuda clientes) y gráficos interactivos (Recharts).",
+            "Notificaciones por WebSocket (Socket.IO) entre secciones y caja: al generar un ticket, el cajero recibe alerta y puede agregarlo al carrito con un clic.",
+            "Reportes exportables a Excel y PDF: ventas, stock, clientes, empleados, ingresos por cuenta bancaria, cierres de caja, etc.",
+            "Autenticación con roles (admin_general, branch_manager, cashier, section_employee) y rutas protegidas en frontend y backend.",
+            "Manejo de stock por sucursal con auditoría completa (movimientos de stock) y alertas de stock bajo.",
+            "Fichada de empleados (asistencia) y cálculo automático de sueldos con comisiones basadas en ventas del período.",
+            "Interfaz responsive adaptada a tablets táctiles (para empleados de sección) y a PCs de administración / caja."
+          ],
+          "learnings": [
+            "Diseño de un modelo de datos complejo en MongoDB con relaciones anidadas (`branchStocks`), arrays embebidos y referencias a otras colecciones, optimizando consultas con índices compuestos.",
+            "Implementación de generación atómica de números de ticket usando `findOneAndUpdate` con `$inc` y contadores separados por sucursal / sección / grupo para evitar race conditions.",
+            "Uso de estrategia de ciclo para tickets (reinicio automático del contador al llegar a 99,999) y formato compacto que incluye ciclo, código de sección/grupo, sucursal y correlativo.",
+            "Integración de generación de códigos de barras en el backend (`bwip-js`) y su exposición como recurso estático para impresión desde el frontend.",
+            "Desarrollo de un módulo de caja multicanal (efectivo, tarjetas, transferencias, QR) con saldos independientes por método y registro de movimientos manuales (gastos, retiros, ajustes).",
+            "Manejo de sesiones y transacciones en Mongoose para operaciones críticas (creación de venta con descuento de stock y marca de ticket como pagado).",
+            "Arquitectura de servicios (stockService, ticketService, saleService, cashierService, promotionService, etc.) que separa la lógica de negocio de los controladores y permite reutilización.",
+            "Configuración de tareas programadas con `node-cron` para limpieza automática de tickets expirados y generación de reportes diarios.",
+            "Validación de datos con `express-validator` y validadores personalizados (documentos argentinos, código de barras, formato de ticket, etc.) con mensajes en español.",
+            "Integración de WebSockets (Socket.IO) para notificaciones en tiempo real entre diferentes roles (empleado de sección → cajero) y actualización de dashboards.",
+            "Uso de Redux Toolkit para manejar el estado global de la sucursal activa, filtros de reportes y carrito de venta, con persistencia en localStorage y sincronización con URL.",
+            "Diseño de interfaz táctil para tablets de sección (botones grandes, entrada de peso/cantidad modal) y formularios eficientes con React Hook Form + Zod.",
+            "Exportación de reportes a múltiples formatos (Excel con `exceljs`, PDF con `pdfkit`) tanto desde el backend como desde el frontend (con `jsPDF`).",
+            "Estrategia de despliegue: backend en Railway / Render, frontend en Vercel / Netlify, MongoDB Atlas, variables de entorno para cada entorno."
+          ],
+          "results": "El sistema está completamente funcional y listo para ser utilizado en un minimercado real con varias sucursales. Permite centralizar la gestión de productos, controlar el stock de manera independiente por cada local, agilizar la atención al cliente con tickets de sección combinados, mejorar la transparencia financiera con cierres de caja detallados y reducir la morosidad gracias a la gestión de cuenta corriente y recordatorios automáticos. La integración con códigos de barras y notificaciones en tiempo real optimiza los flujos de trabajo entre empleados de mostrador y cajeros, reduciendo errores y tiempos de espera. El código está modularizado, documentado y sigue buenas prácticas de desarrollo, lo que facilita su mantenimiento y futuras ampliaciones (integración con pasarelas de pago, sincronización con e-commerce, etc.)."
         },
         {
-          "name": "Countries",
-          "description": "Desarrollé una SPA con React que consume la API de restcountries para visualizar paises, permitiendo su búsqueda, filtrado por continente y por tipo de actividad turística, ordenamiento, y creación de nuevas actividades turisticas almacenadas en base de datos. Utilicé JavaScript, React, Redux, Node.js, Express, Sequelize y PostgreSQL.",
-          "repo": "https://github.com/RodrigoDuran14/PICountries",
-          "demo": "demo",
-          "image": ""
+          "name": "Frutas Mágali",
+          "description": "Plataforma integral para una empresa familiar exportadora de cítricos. Combina una landing page profesional con un CMS completo para que el cliente gestione productos, imágenes, mensajes de contacto y textos institucionales sin ayuda técnica. El sistema es responsive, rápido y fácil de mantener, con notificaciones en tiempo real y almacenamiento en la nube.",
+          "repo": "https://github.com/RodrigoDuran14/frutas-magali",
+          "demo": "https://frutas-magali.vercel.app",
+          "image": "../assets/anfami/homaAnfami.png",
+          "images": [
+            "../assets/anfami/calidadAnfami.png",
+            "../assets/anfami/productosAnfami.png",
+            "../assets/anfami/footerAnfami.png",
+            "../assets/anfami/contactoAnfami.png",
+            "../assets/anfami/formContactoAnfami.png",
+            "../assets/anfami/ubicacionAnfami.png",
+            "../assets/anfami/dashboardAnfami.png",
+            "../assets/anfami/dashboardCarruselAnfami.png",
+            "../assets/anfami/detallemensajeanfami.png",
+            "../assets/anfami/editarcontenidoanfami.png",
+            "../assets/anfami/editarproductoanfami.png",
+            "../assets/anfami/loginAnfami.png",
+            "../assets/anfami/mensajesanfami.png",
+            "../assets/anfami/subircarruselanfami.png"
+          ],
+          "tech": [
+            "React 18",
+            "Vite",
+            "Tailwind CSS",
+            "Firebase (Auth, Firestore)",
+            "Cloudinary",
+            "EmailJS",
+            "React Hot Toast",
+            "React Router DOM"
+          ],
+          "highlights": [
+            "Autenticación segura con Firebase Authentication (solo el administrador accede al dashboard)",
+            "CRUD completo de productos con validación de formularios y subida de imágenes a Cloudinary",
+            "Carrusel dinámico que se actualiza desde el admin (subir/eliminar imágenes)",
+            "Gestión de mensajes de contacto con paginado (5/10/20/50 por página), marcado como leído y eliminación",
+            "Editor en vivo de las secciones 'Misión' y 'Visión' con guardado instantáneo",
+            "Notificaciones toast elegantes (react-hot-toast) para todas las acciones (crear, editar, eliminar, enviar formulario)",
+            "Formulario de contacto funcional que guarda en Firestore y envía email al administrador mediante EmailJS",
+            "Subida de imágenes optimizada con Cloudinary (widget de subida y preview antes de guardar)",
+            "Diseño responsive adaptado a móviles, tablets y desktop (menú hamburguesa, grid fluida, scroll horizontal en tabs)",
+            "Base de datos en tiempo real y almacenamiento en la nube con Firestore y Cloudinary"
+          ],
+          "learnings": [
+            "Integración completa de Firebase (Auth + Firestore) en una aplicación React para manejar autenticación, base de datos y almacenamiento",
+            "Implementación de un CMS custom sin usar herramientas de terceros (como Strapi o Contentful)",
+            "Manejo de estado complejo con múltiples modales (crear/editar productos) y formularios controlados",
+            "Validación de formularios en tiempo real y manejo de errores con feedback visual",
+            "Subida de imágenes a la nube con Cloudinary Upload Widget y gestión de presets",
+            "Envío de emails transaccionales desde el frontend usando EmailJS (sin necesidad de backend propio)",
+            "Paginado y filtrado básico de datos en una colección de Firestore",
+            "Diseño responsive avanzado con Tailwind CSS (grid, flex, media queries personalizadas, scroll horizontal en tabs)",
+            "Despliegue y configuración de variables de entorno en plataformas cloud (Vercel/Netlify)",
+            "Refuerzo de conceptos de componentes reutilizables, custom hooks y organización de código modular"
+          ],
+          "results": "Cliente satisfecho (dueño de la frutícola) que ahora puede administrar su sitio web sin depender de un programador. El sitio está en producción, con excelente tiempo de carga (gracias a Vite y Cloudinary), código mantenible y escalable. El proyecto demuestra la capacidad de construir soluciones completas (frontend + backendless) para negocios reales, integrando múltiples servicios cloud y buenas prácticas de desarrollo."
         }
       ]
     },
@@ -160,6 +466,18 @@
         },
         {
           "name": "SQLServer"
+        },
+        {
+          "name": "TailwindCSS"
+        },
+        {
+          "name": "Firebase"
+        },
+        {
+          "name": "Cloudinary"
+        },
+        {
+          "name": "Vite"
         }
       ]
     },
