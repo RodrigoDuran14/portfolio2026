@@ -1,4 +1,5 @@
 import { FiBriefcase } from 'react-icons/fi'
+import FadeInSection from './FadeInSection'
 
 const Experience = ({ data }) => {
   const experienceData = data.experience
@@ -6,6 +7,7 @@ const Experience = ({ data }) => {
   return (
     <section id="experience" className="py-20 bg-white">
       <div className="container-custom">
+        <FadeInSection>
         <h2 className="section-title">{experienceData.title}</h2>
         <div className="max-w-3xl mx-auto">
           {experienceData.info.map((item, index) => (
@@ -14,6 +16,7 @@ const Experience = ({ data }) => {
               className="relative pl-8 pb-12 last:pb-0 border-l-2 border-gray-200 ml-4 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <FadeInSection direction='left' >
               <div className="absolute left-0 -translate-x-1/2 mt-1">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center shadow-sm" style={{ backgroundColor: 'var(--color-accent)' }}>
                   <FiBriefcase size={16} className="text-white" />
@@ -37,9 +40,11 @@ const Experience = ({ data }) => {
                   ))}
                 </ul>
               </div>
+              </FadeInSection>
             </div>
           ))}
         </div>
+        </FadeInSection>
       </div>
     </section>
   )
